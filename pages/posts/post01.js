@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from 'next/link'
 
 function Counter() {
     const [counter, setCounter] = useState(0);
@@ -61,12 +62,25 @@ function Counter() {
     )
 }
 
+function FistPost() {
+    return (
+        <> 
+            <h2>
+            <Link href="/">
+                <a>Back to home</a>
+            </Link>
+            </h2>
+        </>
+    )
+}
+
 export default function Home() {
     return (
         <div>
             <h1>Home 4 Fun</h1>
-            <Counter />
-            <div>Running ...</div>
+                <Counter />
+                <div>Running ...</div>  
+                <FistPost />                              
         </div>
     )
 }
